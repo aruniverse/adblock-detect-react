@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Provide React Hook that checks if AdBlock is enabled on the page.",
   "main": "lib/index.js",
+  "module": "build/index.js",
   "types": "lib/index.d.ts",
   "author": "https://github.com/aruniverse",
   "license": "MIT",
@@ -16,13 +17,19 @@
     "detect"
   ],
   "scripts": {
-    "build": "tsc -b"
+    "build": "concurrently yarn:build:prod yarn:build:dev",
+    "build:prod": "tsc -b",
+    "build:dev": "tsc -p dev.tsconfig.json",
+    "clean": "rimraf lib build",
+    "rebuild": "yarn clean && yarn build"
   },
   "devDependencies": {
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
+    "concurrently": "^5.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "rimraf": "^3.0.2",
     "typescript": "^3.7.2"
   },
   "peerDependencies": {

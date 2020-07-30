@@ -6,5 +6,5 @@ export const AdBlockDetectedWrapper = ({
 }: React.PropsWithChildren<{}>) => {
   const adBlockDetected = useDetectAdBlock();
 
-  return <>{adBlockDetected && { children }}</>;
+  return <>{adBlockDetected && children}</>;
 };
