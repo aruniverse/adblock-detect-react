@@ -1,11 +1,11 @@
 {
   "name": "adblock-detect-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "Provide React Hook that checks if AdBlock is enabled on the page.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "https://github.com/aruniverse",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/aruniverse/adblock-detect-react",
     "type": "git"
