@@ -1,10 +1,10 @@
 import React from "react";
-import { useAdBlockDetect } from "../hooks/useAdBlockDetect";
+import { useDetectAdBlock } from "../hooks/useDetectAdBlock";
 
 export const AdBlockDetectedWrapper = ({
   children,
 }: React.PropsWithChildren<{}>) => {
-  const { adBlockEnabled } = useAdBlockDetect();
+  const adBlockDetected = useDetectAdBlock();
 
-  return <>{adBlockEnabled && { children }}</>;
+  return <>{adBlockDetected && { children }}</>;
 };
