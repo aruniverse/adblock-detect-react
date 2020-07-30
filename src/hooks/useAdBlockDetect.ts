@@ -16,5 +16,5 @@ export const useAdBlockDetect = () => {
     return adCheck.remove();
   }, []);
 
-  return adBlockEnabled;
+  return { adBlockEnabled };
 };
