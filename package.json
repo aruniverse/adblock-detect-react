@@ -1,0 +1,26 @@
+{
+  "name": "adblock-detect-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Arun George",
+  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/aruniverse/adblock-detect-react",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "typescript": "^3.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  }
+}
