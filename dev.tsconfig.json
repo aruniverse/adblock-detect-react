@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "es2017",
     "lib": [
+      // Required for async iterators/generators:
       "esnext.asynciterable",
+      // These are the defaults for "target": "es2017", but they have to be explicitly specified if we want to add anything to "lib":
       "es2017",
       "dom",
       "dom.iterable",
@@ -19,8 +21,10 @@
     "jsx": "react",
     "declaration": true,
     "sourceMap": true,
+    "inlineSources": true,
     "outDir": "./build",
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "allowJs": true
   },
   "include": ["./src/**/*.ts*"],
   "exclude": ["lib", "build", "node_modules"]
