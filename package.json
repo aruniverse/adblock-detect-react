@@ -1,10 +1,10 @@
 {
   "name": "adblock-detect-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides utilities to check if ad block is enabled on a page via both a React hook and a wrapper component.",
-  "main": "lib/index.js",
-  "module": "build/index.js",
-  "types": "lib/index.d.ts",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "cjs/index.d.ts",
   "author": "https://github.com/aruniverse",
   "license": "MIT",
   "repository": {
@@ -12,8 +12,8 @@
     "type": "git"
   },
   "files": [
-    "lib/**/*",
-    "build/**/*"
+    "cjs/**/*",
+    "esm/**/*"
   ],
   "keywords": [
     "react",
@@ -24,10 +24,10 @@
     "detect"
   ],
   "scripts": {
-    "build": "concurrently yarn:build:prod yarn:build:dev",
-    "build:prod": "tsc -b",
-    "build:dev": "tsc -p dev.tsconfig.json",
-    "clean": "rimraf lib build",
+    "build": "concurrently yarn:build:cjs yarn:build:esm",
+    "build:cjs": "tsc -p cjs.tsconfig.json",
+    "build:esm": "tsc -p esm.tsconfig.json",
+    "clean": "rimraf cjs esm",
     "rebuild": "yarn clean && yarn build",
     "publish:local": "yarn rebuild && yarn pack"
   },
