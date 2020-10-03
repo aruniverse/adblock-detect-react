@@ -1,4 +1,4 @@
 node_modules/
-lib/
-build/
+cjs/
+esm/
 *.tgz
