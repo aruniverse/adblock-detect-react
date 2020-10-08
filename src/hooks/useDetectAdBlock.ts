@@ -7,7 +7,7 @@ export const useDetectAdBlock = () => {
     const adToDetect = document.createElement("div");
     adToDetect.setAttribute(
       "class",
-      "pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links"
+      "googlead pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links"
     );
     adToDetect.setAttribute(
       "style",
