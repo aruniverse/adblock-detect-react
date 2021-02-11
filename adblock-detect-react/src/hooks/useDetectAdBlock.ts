@@ -42,5 +42,18 @@ export const useDetectAdBlock = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // fail safe to double check
+    if (!adBlockDetected) {
+      fetch("pagead/js/adsbygoogle.js", {
+        method: "HEAD",
+        mode: "no-cors",
+        cache: "no-store",
+      }).catch(() => {
+        setAdBlockDetected(true);
+      });
+    }
+  }, []);
+
   return adBlockDetected;
 };

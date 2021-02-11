@@ -5,19 +5,11 @@ on:
     types: [created]
 
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
-  #     - run: yarn
-  #     - run: yarn build
-
   publish-npm:
-    # needs: build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./adblock-detect-react
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -29,18 +21,4 @@ jobs:
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-  # publish-gpr:
-  #   # needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
-  #         registry-url: https://npm.pkg.github.com/
-  #         scope: "@aruniverse"
-  #     # - run: npm ci
-  #     - run: yarn
-  #     - run: yarn publish
-  #       env:
-  #         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          
