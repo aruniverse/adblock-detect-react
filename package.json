@@ -2,10 +2,13 @@
   "name": "adblock-monorepo",
   "private": "true",
   "scripts": {
-    "build": ""
+    "build": "yarn --cwd test-app build"
   },
   "workspaces": [
     "adblock-detect-react/**",
     "test-app/**"
-  ]
+  ],
+  "resolutions": {
+    "immer": "^8.0.1"
+  }
 }
