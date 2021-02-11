@@ -1,6 +1,6 @@
 {
   "name": "adblock-detect-react",
-  "version": "1.0.3",
+  "version": "1.0.3-dev.0",
   "description": "Provides utilities to check if ad block is enabled on a page via both a React hook and a wrapper component.",
   "main": "cjs/index.js",
   "module": "esm/index.js",
