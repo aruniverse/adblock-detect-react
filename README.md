@@ -1,0 +1,24 @@
+# adblock-detect-react
+
+[![npm version](https://badge.fury.io/js/adblock-detect-react.svg)](https://www.npmjs.com/package/adblock-detect-react)
+
+![Publish Status](https://github.com/aruniverse/adblock-detect-react/workflows/Publish%20Package%20Pipeline/badge.svg)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/95c41471-f871-4870-8ebc-159899f744dc/deploy-status)](https://app.netlify.com/sites/adblock-detect-react-test/deploys)
+
+[Live Demo Site](https://adblock-detect-react-test.netlify.app/)
+
+## Description
+
+Small utility package that helps to detect if theres an adblcoker running on your page. For more details look at the [package's readme](./adblock-detect-react/).
+
+#### Last known good
+
+adblock-detect-react@1.0.3 has been verified to work on the following browsers with version:
+
+|               | Version   |
+| ------------- | --------- |
+| Chrome        | 88.0.4324 |
+| Firefox       | 85.0.0    |
+| Chromium Edge | 88.0.705  |
+| Safari        | 14.0.2    |
