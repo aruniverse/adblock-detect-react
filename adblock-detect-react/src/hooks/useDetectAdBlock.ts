@@ -42,8 +42,6 @@ export const useDetectAdBlock = () => {
     };
   }, []);
 
-  console.log(`adBlockDetected: ${adBlockDetected}`);
-
   useEffect(() => {
     // fail safe to double check
     if (!adBlockDetected) {
