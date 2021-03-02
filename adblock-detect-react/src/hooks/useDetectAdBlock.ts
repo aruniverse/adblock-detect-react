@@ -11,15 +11,15 @@ export const useDetectAdBlock = () => {
       mode: "no-cors",
       cache: "no-store",
     })
-      .then((res) => {
-        if (process.env.NODE_ENV !== "production") {
-          console.log(res);
-        }
-      })
+      // .then((res) => {
+      //   if (process.env.NODE_ENV !== "production") {
+      //     console.log(res);
+      //   }
+      // })
       .catch((err) => {
-        if (process.env.NODE_ENV !== "production") {
-          console.log(err);
-        }
+        // if (process.env.NODE_ENV !== "production") {
+        //   console.log(err);
+        // }
         setAdBlockDetected(true);
       });
   }, []);
