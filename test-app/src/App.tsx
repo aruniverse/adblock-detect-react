@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,6 +8,12 @@ import { useDetectAdBlock } from 'adblock-detect-react';
 import { detect } from 'detect-browser';
 
 function App() {
+  useEffect(() => {
+    const { SNOWPACK_PUBLIC_GOOGLE_TRACKING_ID } = import.meta.env;
+    ReactGA.initialize(SNOWPACK_PUBLIC_GOOGLE_TRACKING_ID);
+    ReactGA.pageview(window.location.origin);
+  }, []);
+
   const adBlockDetected = useDetectAdBlock();
   const browser = detect();
 
