@@ -6,7 +6,8 @@
   },
   "workspaces": [
     "adblock-detect-react/**",
-    "test-app/**"
+    "test-app/**",
+    "test-app-2/**"
   ],
   "resolutions": {
     "immer": "^8.0.1"
