@@ -1,11 +1,19 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
-import { useDetectAdBlock } from "adblock-detect-react";
-import { detect } from "detect-browser";
+import logo from './logo.svg';
+import './App.css';
+
+import { useDetectAdBlock } from 'adblock-detect-react';
+import { detect } from 'detect-browser';
 
 function App() {
+  useEffect(() => {
+    const { SNOWPACK_PUBLIC_GOOGLE_TRACKING_ID } = import.meta.env;
+    ReactGA.initialize(SNOWPACK_PUBLIC_GOOGLE_TRACKING_ID);
+    ReactGA.pageview(window.location.origin);
+  }, []);
+
   const adBlockDetected = useDetectAdBlock();
   const browser = detect();
 
@@ -16,7 +24,7 @@ function App() {
         {adBlockDetected && (
           <>
             <img src={logo} className="App-logo" alt="logo" />
-            <div>{"An ad-blocker has been detected!"}</div>
+            <div>{'An ad-blocker has been detected!'}</div>
             <a
               className="App-link"
               href="https://www.npmjs.com/package/adblock-detect-react"
