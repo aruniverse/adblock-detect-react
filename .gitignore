@@ -5,3 +5,10 @@ esm/
 
 build/
 *.eslintcache
+
+.turbo
+
+.DS_Store
+dist
+dist-ssr
+*.local
