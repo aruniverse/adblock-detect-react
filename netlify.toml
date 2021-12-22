@@ -1,5 +1,5 @@
 [build.environment]
   NPM_FLAGS="--prefix=/dev/null"
 [build]
-  publish = "public"
+  publish = "vite-test/dist"
   command = "npx pnpm i -r --store=node_modules/.pnpm-store && npx pnpm run build"
