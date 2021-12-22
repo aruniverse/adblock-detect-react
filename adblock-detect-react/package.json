@@ -24,7 +24,7 @@
     "detect"
   ],
   "scripts": {
-    "build": "concurrently yarn:build:cjs yarn:build:esm",
+    "build": "npm run -s build:cjs && npm run -s build:esm",
     "build:cjs": "tsc -p cjs.tsconfig.json",
     "build:esm": "tsc -p esm.tsconfig.json",
     "clean": "rimraf cjs esm",

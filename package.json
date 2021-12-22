@@ -1,13 +1,30 @@
 {
   "name": "adblock-monorepo",
-  "private": "true",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "build": "yarn --cwd test-app build"
+    "preinstall": "npx only-allow pnpm",
+    "build": "turbo run build",
+    "clean": "turbo run clean && rm -rf node_modules"
   },
-  "workspaces": [
-    "adblock-detect-react/**",
-    "test-app/**"
-  ],
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "turbo": {
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "cjs/**",
+          "esm/**",
+          "dist/**"
+        ]
+      },
+      "lint": {}
+    }
+  },
   "resolutions": {
     "immer": "^8.0.1"
   }
