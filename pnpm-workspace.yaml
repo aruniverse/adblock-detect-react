@@ -1,4 +1,3 @@
 packages:
   - "adblock-detect-react/**"
-  - "test-app/**"
   - "vite-test/**"
