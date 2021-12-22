@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "preinstall": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || npx only-allow pnpm",
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "build": "turbo run build",
     "clean": "turbo run clean && rm -rf node_modules"
   },
@@ -11,6 +12,7 @@
     "turbo": "latest"
   },
   "turbo": {
+    "npmClient": "pnpm",
     "pipeline": {
       "build": {
         "dependsOn": [
