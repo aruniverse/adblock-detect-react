@@ -4,9 +4,8 @@
 
 ![Publish Status](https://github.com/aruniverse/adblock-detect-react/workflows/Publish%20Package%20Pipeline/badge.svg)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/95c41471-f871-4870-8ebc-159899f744dc/deploy-status)](https://app.netlify.com/sites/adblock-detect-react-test/deploys)
 
-[Live Demo Site](https://adblock-detect-react-test.netlify.app/)
+[Live Demo Site](https://adblock-detect-react.vercel.app/)
 
 ## Description
 
