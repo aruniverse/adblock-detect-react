@@ -1,15 +1,6 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "lib": [
-      // Required for async iterators/generators:
-      "esnext.asynciterable",
-      // These are the defaults for "target": "es2017", but they have to be explicitly specified if we want to add anything to "lib":
-      "es2017",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ],
     "module": "commonjs",
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,14 +8,11 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "jsx": "react",
     "declaration": true,
     "sourceMap": true,
     "inlineSources": true,
-    "outDir": "./cjs",
-    "downlevelIteration": true,
-    "allowJs": true
+    "removeComments": true,
   },
   "include": ["./src/**/*.ts*"],
   "exclude": ["cjs", "esm", "node_modules"]

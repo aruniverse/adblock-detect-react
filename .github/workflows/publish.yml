@@ -11,14 +11,24 @@ jobs:
       run:
         working-directory: ./adblock-detect-react
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
         with:
-          node-version: 12
+          fetch-depth: 2
+      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - run: yarn build
-      - run: yarn publish --access public
+      
+      - uses: pnpm/action-setup@v2.2.2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: true
+
+      - run: pnpm build
+      
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          

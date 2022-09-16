@@ -5,26 +5,12 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "turbo run build",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "clean": "turbo run clean",
+    "clean:all": "turbo run clean && rimraf node_modules"
   },
   "devDependencies": {
-    "turbo": "latest"
-  },
-  "turbo": {
-    "npmClient": "pnpm",
-    "pipeline": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "outputs": [
-          "cjs/**",
-          "esm/**",
-          "dist/**"
-        ]
-      },
-      "lint": {}
-    }
+    "turbo": "latest",
+    "rimraf": "3.0.2"
   },
   "resolutions": {
     "immer": "^8.0.1"

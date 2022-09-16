@@ -10,18 +10,9 @@ export const useDetectAdBlock = () => {
       method: "HEAD",
       mode: "no-cors",
       cache: "no-store",
-    })
-      // .then((res) => {
-      //   if (process.env.NODE_ENV !== "production") {
-      //     console.log(res);
-      //   }
-      // })
-      .catch((err) => {
-        // if (process.env.NODE_ENV !== "production") {
-        //   console.log(err);
-        // }
-        setAdBlockDetected(true);
-      });
+    }).catch(() => {
+      setAdBlockDetected(true);
+    });
   }, []);
 
   return adBlockDetected;
