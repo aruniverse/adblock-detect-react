@@ -14,7 +14,8 @@
     "clean:all": "pnpm clean && rimraf node_modules",
     "change": "beachball change",
     "check": "beachball check",
-    "release": "beachball publish"
+    "release": "beachball publish",
+    "sync": "beachball sync"
   },
   "devDependencies": {
     "beachball": "^2.39.0",
