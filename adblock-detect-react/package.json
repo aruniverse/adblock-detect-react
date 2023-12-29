@@ -8,8 +8,9 @@
   "author": "https://github.com/aruniverse",
   "license": "MIT",
   "repository": {
+    "type": "git",
     "url": "https://github.com/aruniverse/adblock-detect-react",
-    "type": "git"
+    "directory": "adblock-detect-react"
   },
   "files": [
     "cjs/**/*",
@@ -28,17 +29,15 @@
     "build:cjs": "tsc 1>&2 --outDir cjs",
     "build:esm": "tsc 1>&2 --module ES2020 --outDir esm",
     "clean": "rimraf cjs esm",
-    "rebuild": "npm run -s clean && npm run -s build",
-    "publish:local": "npm run -s rebuild && npm run -s pack"
+    "rebuild": "npm run -s clean && npm run -s build"
   },
   "devDependencies": {
     "@types/react": "^16.14.55",
     "@types/react-dom": "^16.9.24",
-    "concurrently": "^5.3.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.10"
+    "typescript": "~5.3.2"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
