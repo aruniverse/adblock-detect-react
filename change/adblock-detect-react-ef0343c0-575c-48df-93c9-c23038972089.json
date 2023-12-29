@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "handle ublock origin",
+  "packageName": "adblock-detect-react",
+  "email": "aruniverse@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
