@@ -32,13 +32,13 @@
     "publish:local": "npm run -s rebuild && npm run -s pack"
   },
   "devDependencies": {
-    "@types/react": "^16.9.43",
-    "@types/react-dom": "^16.9.8",
-    "concurrently": "^5.2.0",
+    "@types/react": "^16.14.55",
+    "@types/react-dom": "^16.9.24",
+    "concurrently": "^5.3.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "rimraf": "^3.0.2",
-    "typescript": "^3.7.2"
+    "typescript": "^3.9.10"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

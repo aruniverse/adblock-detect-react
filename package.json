@@ -2,17 +2,22 @@
   "name": "adblock-monorepo",
   "version": "0.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aruniverse/adblock-detect-react.git"
+  },
+  "packageManager": "pnpm@8.13.1",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "turbo run build",
-    "clean": "turbo run clean",
-    "clean:all": "turbo run clean && rimraf node_modules"
+    "build": "pnpm -r build",
+    "clean": "pnpm -r clean",
+    "clean:all": "pnpm clean && rimraf node_modules",
+    "change": "beachball change",
+    "checkchange": "beachball check",
+    "release": "beachball publish"
   },
   "devDependencies": {
-    "turbo": "latest",
+    "beachball": "^2.39.0",
     "rimraf": "3.0.2"
-  },
-  "resolutions": {
-    "immer": "^8.0.1"
   }
 }
