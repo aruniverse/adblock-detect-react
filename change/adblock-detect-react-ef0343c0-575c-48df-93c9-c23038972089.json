@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "Correctly handle ad blockers that return a HTTP307 redirect",
-  "packageName": "adblock-detect-react",
-  "email": "aruniverse@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

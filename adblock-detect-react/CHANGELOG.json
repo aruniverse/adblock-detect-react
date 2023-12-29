@@ -1,0 +1,28 @@
+{
+  "name": "adblock-detect-react",
+  "entries": [
+    {
+      "date": "Fri, 29 Dec 2023 18:31:24 GMT",
+      "version": "1.3.0",
+      "tag": "adblock-detect-react_v1.3.0",
+      "comments": {
+        "patch": [
+          {
+            "author": "aruniverse@users.noreply.github.com",
+            "package": "adblock-detect-react",
+            "commit": "81b795649b72aa48ff7f9118cc3f90afa145f68a",
+            "comment": "Publish changelogs"
+          }
+        ],
+        "minor": [
+          {
+            "author": "aruniverse@users.noreply.github.com",
+            "package": "adblock-detect-react",
+            "commit": "c3dffee8e4520561522e3014b148fe196553c064",
+            "comment": "Correctly handle ad blockers that return a HTTP307 redirect"
+          }
+        ]
+      }
+    }
+  ]
+}
