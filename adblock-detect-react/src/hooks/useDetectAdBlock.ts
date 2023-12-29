@@ -10,9 +10,13 @@ export const useDetectAdBlock = () => {
       method: "HEAD",
       mode: "no-cors",
       cache: "no-store",
-    }).catch(() => {
-      setAdBlockDetected(true);
-    });
+    })
+      .then(({ redirected }) => {
+        if (redirected) setAdBlockDetected(true);
+      })
+      .catch(() => {
+        setAdBlockDetected(true);
+      });
   }, []);
 
   return adBlockDetected;
