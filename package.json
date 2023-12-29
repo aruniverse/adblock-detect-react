@@ -13,7 +13,7 @@
     "clean": "pnpm -r clean",
     "clean:all": "pnpm clean && rimraf node_modules",
     "change": "beachball change",
-    "checkchange": "beachball check",
+    "check": "beachball check",
     "release": "beachball publish"
   },
   "devDependencies": {

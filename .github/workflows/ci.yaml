@@ -5,7 +5,7 @@ on:
     branches: "master"
 
 jobs:
-  publish-npm:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
