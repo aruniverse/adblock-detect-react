@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "change jsx target back to react",
+  "packageName": "adblock-detect-react",
+  "email": "11051042+aruniverse@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
