@@ -2,6 +2,21 @@
   "name": "adblock-detect-react",
   "entries": [
     {
+      "date": "Wed, 03 Jan 2024 17:39:59 GMT",
+      "version": "1.3.1",
+      "tag": "adblock-detect-react_v1.3.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "11051042+aruniverse@users.noreply.github.com",
+            "package": "adblock-detect-react",
+            "commit": "ef9dd717020645dbc1b0b1db6e97d246ac92133f",
+            "comment": "change jsx target back to react"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 29 Dec 2023 18:31:24 GMT",
       "version": "1.3.0",
       "tag": "adblock-detect-react_v1.3.0",
